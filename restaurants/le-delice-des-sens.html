@@ -1,71 +1,127 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
+    <script src="https://kit.fontawesome.com/4f929c4a6e.js" crossorigin="anonymous"></script>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ohmyfood - Le délice des sens</title>
-    <link rel="stylesheet" href="./css/styles.css">
+    <meta name="author" content="Thomas Baque">
+    <title>ohmyfood - À la française</title>
+    <link rel="stylesheet" href="./scss/style.css" type="text/css" media="all">
 </head>
 <body>
     <header>
-        <a href="../index.html"><img class="logoHeader" src="/images/logo/ohmyfood@2x.svg" alt="Logo du site ohmyfood" class="logo"></a>
+        <div class="header__restaurant">
+            <i class="header__back fas fa-arrow-left"></i>
+            <a class="header__logo--restaurant" href="./index.html"><img class="header__img" src="/images/logo/ohmyfood@2x.svg" alt="Logo du site ohmyfood"></a>
+        </div>
     </header>
     <main>
-        <div class="restaurantImageWrapper">
-            <img src="../images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="Photo d'un plat du restaurant À la Française" class="restaurantPhoto">
-        </div>
-        <div class="restaurantNameWrapper">
-            <h1 class="restaurantName">Le délice des sens</h1>
-            <i class="restaurantLikeIcon far fa-heart"></i>
+        <img class="restaurant__img" src="../images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="Photo d'un plat du restaurant.">
+        <div class="restaurant__nameWrapper">
+            <h1 class="restaurant__name">Le délice des sens</h1>
+            <i class="restaurant__icon--name far fa-heart"></i>
         </div>
         <section class="menu">
-            <div class="menuStarter">
-                <h2 class="menuTitle">Entrées</h2>
-                <div class="starterItem">
-
+            <div class="menu__starter">
+                <h2 class="menu__title">Entrées</h2>
+                <div class="menu__wrapper">
+                    <div class="menu__item">
+                        <h3 class="menu__itemName"></h3>
+                        <p class="menu__itemInfo"></p>
+                    </div>
+                    <div class="menu__animation">
+                        <i class="menu__animationIcon animationIcon fas fa-check-circle"></i>
+                    </div>
                 </div>
-                <div class="starterItem">
-                    
+                <div class="menu__wrapper">
+                    <div class="menu__item">
+                        <h3 class="menu__itemName"></h3>
+                        <p class="menu__itemInfo"></p>
+                    </div>
+                    <div class="menu__animation">
+                        <i class="menu__animationIcon animationIcon fas fa-check-circle"></i>
+                    </div>
                 </div>
-                <div class="starterItem">
-                    
+                <div class="menu__wrapper">
+                    <div class="menu__item">
+                        <h3 class="menu__itemName"></h3>
+                        <p class="menu__itemInfo"></p>
+                    </div>
+                    <div class="menu__animation">
+                        <i class="menu__animationIcon animationIcon fas fa-check-circle"></i>
+                    </div>
                 </div>
             </div>
-            <div class="menuMain">
-                <h2 class="menuTitle">Plats</h2>
-                <div class="mainItem">
-
+            <div class="menu__main">
+                <h2 class="menu__title">Plats</h2>
+                <div class="menu__wrapper">
+                    <div class="menu__item">
+                        <h3 class="menu__itemName"></h3>
+                        <p class="menu__itemInfo"></p>
+                    </div>
+                    <div class="menu__animation">
+                        <i class="menu__animationIcon animationIcon fas fa-check-circle"></i>
+                    </div>
                 </div>
-                <div class="mainItem">
-                    
+                <div class="menu__wrapper">
+                    <div class="menu__item">
+                        <h3 class="menu__itemName"></h3>
+                        <p class="menu__itemInfo"></p>
+                    </div>
+                    <div class="menu__animation">
+                        <i class="menu__animationIcon animationIcon fas fa-check-circle"></i>
+                    </div>
                 </div>
-                <div class="mainItem">
-                    
+                <div class="menu__wrapper">
+                    <div class="menu__item">
+                        <h3 class="menu__itemName"></h3>
+                        <p class="menu__itemInfo"></p>
+                    </div>
+                    <div class="menu__animation">
+                        <i class="menu__animationIcon animationIcon fas fa-check-circle"></i>
+                    </div>
                 </div>
             </div>
-            <div class="menuDessert">
-                <h2 class="menuTitle">Desserts</h2>
-                <div class="dessertItem">
-
+            <div class="menu-dessert">
+                <h2 class="menu__title">Desserts</h2>
+                <div class="menu__wrapper">
+                    <div class="menu__item">
+                        <h3 class="menu__itemName"></h3>
+                        <p class="menu__itemInfo"></p>
+                    </div>
+                    <div class="menu__animation">
+                        <i class="menu__animationIcon animationIcon fas fa-check-circle"></i>
+                    </div>
                 </div>
-                <div class="dessertItem">
-                    
+                <div class="menu__wrapper">
+                    <div class="menu__item">
+                        <h3 class="menu__itemName"></h3>
+                        <p class="menu__itemInfo"></p>
+                    </div>
+                    <div class="menu__animation">
+                        <i class="menu__animationIcon animationIcon fas fa-check-circle"></i>
+                    </div>
                 </div>
-                <div class="dessertItem">
-                    
+                <div class="menu__wrapper">
+                    <div class="menu__item">
+                        <h3 class="menu__itemName"></h3>
+                        <p class="menu__itemInfo"></p>
+                    </div>
+                    <div class="menu__animation">
+                        <i class="menu__animationIcon animationIcon fas fa-check-circle"></i>
+                    </div>
                 </div>
             </div>
         </section>
-        <button class="order">Commander</button>
+        <a href="#"><span class="order">Commander</span></a>
     </main>
     <footer>
-        <img class="logoFooter" src="/images/logo/ohmyfood@2x.svg" alt="Logo du site ohmyfood" class="logo">
-        <div class="footerElements">
-            <p class="footerItem"><i class="fas fa-utensils"></i><a href="#">Proposer un restaurant</a></p>
-            <p class="footerItem"><i class="fas fa-hands-helping"></i><a href="#">Devenir partenaire</a></p>
-            <p class="footerItem"><a href="#">Mentions légales</a></p>
-            <p class="FooterItems"><a href="#">Contact</a></p>
+        <img class="footer__logo" src="/images/logo/ohmyfood@2x.svg" alt="Logo du site ohmyfood">
+        <div class="footer__content">
+            <p class="footer__item"><i class="footer__icon fas fa-utensils"></i><a href="#">Proposer un restaurant</a></p>
+            <p class="footer__item"><i class="footer__icon fas fa-hands-helping"></i><a href="#">Devenir partenaire</a></p>
+            <p class="footer__item"><a href="#">Mentions légales</a></p>
+            <p class="Footer__item"><a href="#">Contact</a></p>
         </div>
     </footer>
 </body>
