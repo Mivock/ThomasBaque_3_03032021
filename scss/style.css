@@ -17,12 +17,21 @@ body {
   height: 100vh;
   margin: 0;
   padding: 0;
-  font-family: 'Roboto', Arial, Helvetica, sans-serif;
+  font-family: "Roboto", sans-serif, Arial, Helvetica, sans-serif;
 }
 
 body a {
   text-decoration: none;
   color: initial;
+}
+
+body .footer__logo {
+  font-family: "Shrikhand", cursive, Arial, Helvetica, sans-serif;
+  color: white;
+}
+
+body footer a, body i {
+  color: white;
 }
 
 .header {
@@ -132,5 +141,61 @@ body a {
 
 .restaurant {
   background-color: rgba(246, 244, 244, 0.64);
+  padding: 2rem 1rem 4rem 1rem;
+  max-height: auto;
+}
+
+.restaurant__grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: (auto)[4];
+      grid-template-rows: repeat(4, auto);
+  row-gap: 20px;
+}
+
+.restaurant__card {
+  height: 30vh;
+  width: 100%;
+  border-radius: 25px;
+  background-color: white;
+  -webkit-box-shadow: 0px 0px 15px 5px lightgray;
+          box-shadow: 0px 0px 15px 5px lightgray;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 70% 30%;
+      grid-template-rows: 70% 30%;
+}
+
+.restaurant__img {
+  width: 100%;
+  height: 100%;
+  border-radius: 20px 20px 0 0;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.restaurant__info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: left;
+      -ms-flex-align: left;
+          align-items: left;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 10px 15px;
+}
+
+.restaurant__info h3, .restaurant__info p {
+  margin: 0;
+  padding: 3px 0;
+}
+
+footer {
+  height: 55vh;
+  background-color: #3a3939;
+  padding: .5rem 1rem 2rem 1rem;
 }
 /*# sourceMappingURL=style.css.map */
