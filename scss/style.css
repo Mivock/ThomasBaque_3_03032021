@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
-.header, .location, .howto__number, .restaurant__icon {
+.header, .location, .howto__number, .restaurant__icon, .restaurant__icon--full {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -23,6 +23,10 @@ body {
 body a {
   text-decoration: none;
   color: initial;
+}
+
+body .restaurant__icon--full {
+  visibility: hidden;
 }
 
 .header {
@@ -66,7 +70,8 @@ body a {
 
 .explore__button {
   color: white;
-  background-color: #9356DC;
+  background: #9356DC;
+  background: linear-gradient(355deg, #9356DC 49%, #FF79DA 100%);
   padding: 13px 20px;
   border-radius: 50px;
   -webkit-box-shadow: 0px 0px 25px gray;
@@ -78,8 +83,8 @@ body a {
   padding: 2rem;
   display: -ms-grid;
   display: grid;
-  -ms-grid-rows: 3 1fr;
-      grid-template-rows: 3 1fr;
+  -ms-grid-rows: auto 1fr;
+      grid-template-rows: auto 1fr;
   row-gap: 20px;
 }
 
@@ -135,14 +140,13 @@ body a {
 .restaurant {
   background-color: rgba(246, 244, 244, 0.64);
   padding: 2rem 1rem 4rem 1rem;
-  max-height: auto;
 }
 
 .restaurant__grid {
   display: -ms-grid;
   display: grid;
-  -ms-grid-rows: (auto)[4];
-      grid-template-rows: repeat(4, auto);
+  -ms-grid-rows: auto;
+      grid-template-rows: auto;
   row-gap: 20px;
 }
 
@@ -179,9 +183,6 @@ body a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: left;
-      -ms-flex-align: left;
-          align-items: left;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -197,12 +198,6 @@ body a {
   padding: 3px 0;
 }
 
-.restaurant__icon {
-  font-size: 2em;
-  position: relative;
-  top: 30%;
-}
-
 .restaurant__button {
   grid-column: disabled;
   position: relative;
@@ -214,6 +209,17 @@ body a {
   border-radius: 5px;
   background-color: #99E2D0;
   color: #217460;
+}
+
+.restaurant__icon, .restaurant__icon--full {
+  font-size: 2em;
+  position: relative;
+  top: 30%;
+}
+
+.restaurant__icon:hover .icon--full {
+  z-index: 5;
+  visibility: visible;
 }
 
 .footer {

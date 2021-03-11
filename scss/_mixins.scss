@@ -1,0 +1,7 @@
+@mixin heart-animation {
+    color: rgb(147,86,220);
+    color: linear-gradient(180deg, 
+    rgba(147,86,220,0.6581395348837209) 49%, 
+    rgba(255,121,218,1) 100%);
+    fill: $color-primary;
+}
