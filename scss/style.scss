@@ -19,10 +19,9 @@ body {
         color: initial;
     }
 
-    .restaurant__icon--full {
-        visibility: hidden;
-    }
 }
+
+//start homepage
 
 .header {
     @extend %flex-center;
@@ -184,23 +183,23 @@ body {
         color: darken($color-third, 45);
     }
 
-    &__icon , &__icon--full {
+    &__icon {
             font-size: 2em;
             @extend %flex-center;
             position: relative;
-            top: 30%;
+            top: 30%;     
 
     }
-    
-    &__icon:hover {
-        .icon--full {
-            z-index: 5;
-            visibility: visible;
-        }
-    }
-    
-
 }
+//end homepage
+
+.menu {
+    background-color: rgba(246, 244, 244, 0.64);
+    border-radius: 20px 20px 0 0;
+}
+
+
+
 
 .footer {
     max-height: 25vh;
