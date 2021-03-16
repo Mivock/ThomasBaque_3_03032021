@@ -12,6 +12,18 @@
           align-items: center;
 }
 
+.menu__nameWrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 body {
   max-width: 1023px;
   height: 100vh;
@@ -50,7 +62,7 @@ body a {
 
 .explore {
   padding: 2rem 2rem 4rem 2rem;
-  background-color: rgba(246, 244, 244, 0.64);
+  background-color: rgba(238, 235, 235, 0.523);
   text-align: center;
 }
 
@@ -211,6 +223,38 @@ body a {
   font-size: 2em;
   position: relative;
   top: 30%;
+}
+
+.header__icon {
+  position: absolute;
+  left: 8%;
+}
+
+.cover {
+  max-width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.menu {
+  margin-top: -50px;
+}
+
+.menu__nameWrapper {
+  position: relative;
+  padding: 1rem 2rem 0 1rem;
+  border-radius: 2rem 2rem 0 0;
+  background-color: #fff;
+  z-index: 2;
+}
+
+.menu__nameWrapper h1 {
+  font-family: "Shrikhand", cursive;
+  font-size: 1.7rem;
+}
+
+.menu__nameWrapper i {
+  font-size: 1.7rem;
 }
 
 .menu {

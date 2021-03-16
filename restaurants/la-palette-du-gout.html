@@ -9,19 +9,17 @@
     <link rel="stylesheet" href="/scss/style.css" type="text/css" media="all">
 </head>
 <body>
-    <header>
-        <div class="header__restaurant">
-            <a href="../index.html"><i class="header__back fas fa-arrow-left"></i></a>
-            <a class="header__logo--restaurant" href="../index.html"><img class="header__img" src="/images/logo/ohmyfood@2x.svg" alt="Logo du site ohmyfood"></a>
-        </div>
+    <header class="header">
+            <a class="header__icon" href="../index.html"><i class="header__back fas fa-arrow-left"></i></a>
+            <a class="header__link" href="../index.html"><img class="header__img" src="/images/logo/ohmyfood@2x.svg" alt="Logo du site ohmyfood"></a>
     </header>
     <main>
-        <img class="restaurant__img" src="../images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="Photo d'un plat du restaurant.">
-        <div class="restaurant__nameWrapper">
-            <h1 class="restaurant__name">La palette du goût</h1>
-            <i class="restaurant__icon--name far fa-heart"></i>
-        </div>
+        <img class="cover" src="../images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="Photo d'un plat du restaurant.">
         <section class="menu">
+            <div class="menu__nameWrapper">
+                <h1 class="restaurant__name">La palette du goût</h1>
+                <i class="restaurant__icon--name far fa-heart"></i>
+            </div>
             <div class="menu__starter">
                 <h2 class="menu__title">Entrées</h2>
                 <div class="menu__wrapper">
@@ -121,8 +119,9 @@
                     </div>
                 </div>
             </div>
+            <a href="#"><span class="order">Commander</span></a>
         </section>
-        <a href="#"><span class="order">Commander</span></a>
+        
     </main>
     <footer class="footer">
         <h2 class="footer__logo">ohmyfood</h2>

@@ -48,7 +48,7 @@ body {
 
 .explore {
     padding: 2rem 2rem 4rem 2rem;
-    background-color: rgba(246, 244, 244, 0.64);
+    background-color: rgba(238, 235, 235, 0.523);
     text-align: center;
 
     &__title {
@@ -193,6 +193,42 @@ body {
 }
 //end homepage
 
+.header__icon {
+    position: absolute;
+    left: 8%;
+}
+
+.cover {
+    max-width: 100%;
+    object-fit: cover
+}
+
+.menu {
+    margin-top: -50px;
+
+    &__nameWrapper {
+        @extend %flex-space;
+        position: relative;
+        padding: 1rem 2rem 0 1rem;
+        border-radius: 2rem 2rem 0 0;
+        background-color: #fff;
+        z-index: 2;
+
+        h1 {
+            font-family: $font-title;
+            font-size: 1.7rem;
+        }
+        i {
+            font-size: 1.7rem;
+        }
+    }
+}
+
+
+
+
+
+
 .menu {
     background-color: rgba(246, 244, 244, 0.64);
     border-radius: 20px 20px 0 0;
@@ -200,6 +236,10 @@ body {
 
 
 
+
+
+
+// footer
 
 .footer {
     max-height: 25vh;
