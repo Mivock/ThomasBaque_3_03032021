@@ -229,7 +229,7 @@ body a {
   top: 10%;
   height: 10%;
   text-align: center;
-  padding: .5rem .7rem;
+  padding: .4rem .7rem .2rem .7rem;
   border-radius: 5px;
   background-color: #99E2D0;
   color: #217460;
@@ -364,5 +364,79 @@ body a {
   width: 10px;
   padding-right: 15px;
   font-size: 14px;
+}
+
+@media only screen and (min-width: 1024px) {
+  body {
+    min-width: 100%;
+  }
+  .howto {
+    -ms-grid-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+    -ms-grid-rows: auto 1fr;
+        grid-template-rows: auto 1fr;
+    -webkit-column-gap: 2rem;
+            column-gap: 2rem;
+  }
+  .howto__steps {
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 1;
+    grid-row: 2/3;
+  }
+  .restaurant__grid {
+    margin: auto;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    -ms-grid-rows: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    -webkit-column-gap: 1rem;
+            column-gap: 1rem;
+  }
+  .cover {
+    max-height: 40vh;
+    width: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .menu {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+    -ms-grid-rows: (auto)[5];
+        grid-template-rows: repeat(5, auto);
+    -webkit-column-gap: 2.5rem;
+            column-gap: 2.5rem;
+  }
+  .menu__nameWrapper {
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+    grid-row: 1/2;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 3;
+    grid-column: 1/4;
+  }
+  .menu__title {
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 1;
+    grid-row: 2/3;
+  }
+  .menu__starter, .menu__main, .menu__dessert {
+    -ms-grid-row: 3;
+    -ms-grid-row-span: 1;
+    grid-row: 3/4;
+  }
+  .menu__buttonWrapper {
+    -ms-grid-row: 4;
+    -ms-grid-row-span: 1;
+    grid-row: 4/5;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 3;
+    grid-column: 1/4;
+  }
+  .menu__button {
+    font-size: 1.7rem;
+    padding: 1rem 2rem;
+  }
 }
 /*# sourceMappingURL=style.css.map */
