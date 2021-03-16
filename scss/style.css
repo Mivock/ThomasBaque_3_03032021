@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
-.header, .location, .howto__number, .restaurant__icon {
+.header, .location, .howto__number, .restaurant__icon, .menu__itemPrice {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -22,6 +22,33 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.menu__starter, .menu__main, .menu__dessert {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: auto;
+      grid-template-rows: auto;
+}
+
+.menu__wrapper {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 80% 20%;
+      grid-template-columns: 80% 20%;
+  -ms-grid-rows: 2rem 2rem;
+      grid-template-rows: 2rem 2rem;
+}
+
+.explore__button, .menu__button {
+  color: white;
+  background: #9356DC;
+  background: linear-gradient(355deg, #9356DC 49%, #FF79DA 100%);
+  padding: 13px 20px;
+  border-radius: 50px;
+  -webkit-box-shadow: 0px 0px 25px gray;
+          box-shadow: 0px 0px 25px gray;
+  cursor: pointer;
 }
 
 body {
@@ -74,17 +101,6 @@ body a {
 .explore__text {
   font-weight: 300;
   padding-bottom: 2rem;
-}
-
-.explore__button {
-  color: white;
-  background: #9356DC;
-  background: linear-gradient(355deg, #9356DC 49%, #FF79DA 100%);
-  padding: 13px 20px;
-  border-radius: 50px;
-  -webkit-box-shadow: 0px 0px 25px gray;
-          box-shadow: 0px 0px 25px gray;
-  cursor: pointer;
 }
 
 .howto {
@@ -238,6 +254,7 @@ body a {
 
 .menu {
   margin-top: -50px;
+  padding: 0 1rem;
 }
 
 .menu__nameWrapper {
@@ -245,7 +262,7 @@ body a {
   padding: 1rem 2rem 0 1rem;
   border-radius: 2rem 2rem 0 0;
   background-color: #fff;
-  z-index: 2;
+  margin: 0 -1rem;
 }
 
 .menu__nameWrapper h1 {
@@ -257,9 +274,74 @@ body a {
   font-size: 1.7rem;
 }
 
-.menu {
-  background-color: rgba(246, 244, 244, 0.64);
-  border-radius: 20px 20px 0 0;
+.menu__starter, .menu__main, .menu__dessert {
+  row-gap: 1rem;
+}
+
+.menu__title {
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  padding-bottom: .5rem;
+  position: relative;
+  font-weight: 300;
+}
+
+.menu__title::after {
+  content: "";
+  width: 3.3rem;
+  height: .2rem;
+  background-color: #99e2d0;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+.menu__wrapper {
+  border-radius: 15px;
+  padding: .3rem;
+  -webkit-box-shadow: 3px 3px 10px 3px #ccc;
+          box-shadow: 3px 3px 10px 3px #ccc;
+}
+
+.menu__itemName, .menu__itemInfo {
+  vertical-align: middle;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: auto;
+  width: 95%;
+  padding: 0 .5rem;
+  font-size: 1rem;
+}
+
+.menu__itemPrice {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2/3;
+  grid-row: -2/-1;
+  font-weight: bold;
+}
+
+.menu__itemName {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1/2;
+}
+
+.menu__itemInfo {
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  grid-row: 2/3;
+  font-weight: 300;
+}
+
+.menu__animation {
+  display: none;
+}
+
+.menu__buttonWrapper {
+  padding: 4rem 2rem 4rem 2rem;
+  text-align: center;
 }
 
 .footer {
