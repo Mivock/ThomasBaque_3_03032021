@@ -228,13 +228,13 @@ body {
         row-gap: 1rem;
     }
     &__starter {
-        animation: menuAnim .5s cubic-bezier(.2,1.3,.64,1) both;
+        animation: menuAnim 1s cubic-bezier(.2,1.3,.64,1) both;
     }
     &__main {
-        animation: menuAnim .5s cubic-bezier(.2,1.3,.64,1) .5s both;
+        animation: menuAnim 1s cubic-bezier(.2,1.3,.64,1) .6s both;
     }
     &__dessert {
-        animation: menuAnim .5s cubic-bezier(.2,1.3,.64,1) 1s both;
+        animation: menuAnim 1s cubic-bezier(.2,1.3,.64,1) 1.2s both;
     }
 
     &__title {
