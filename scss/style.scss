@@ -5,6 +5,7 @@
 @import "./mixins";
 @import "./placeholders";
 @import "./variables";
+@import "./animations";
 
 
 body {
@@ -225,6 +226,15 @@ body {
     &__starter, &__main, &__dessert {
         @extend %menu-grid;
         row-gap: 1rem;
+    }
+    &__starter {
+        animation: menuAnim .5s cubic-bezier(.2,1.3,.64,1) both;
+    }
+    &__main {
+        animation: menuAnim .5s cubic-bezier(.2,1.3,.64,1) .5s both;
+    }
+    &__dessert {
+        animation: menuAnim .5s cubic-bezier(.2,1.3,.64,1) 1s both;
     }
 
     &__title {
