@@ -21,8 +21,34 @@ body {
     }
 
 }
+//loader
 
-//start homepage
+.loader {
+    height: 100%;
+    width: 100%;
+    background-color: #fff;
+    opacity: .8;
+    z-index: 3;
+    position: fixed;
+    animation: test-loader 1s 2s both;
+
+    &__wrapper {
+        position: absolute;
+        top: 50%;
+        text-align: center;
+        width: 100%;
+
+        & h1{
+        color: $color-primary;
+        font-weight: bolder;
+        font-size: 32px;
+        font-family: $font-title;
+        text-transform: uppercase
+        }
+    }
+}
+
+//homepage
 
 .header {
     @extend %flex-center;
@@ -186,9 +212,8 @@ body {
 
     }
 }
-//end homepage
 
-//start restaurants
+//restaurants
 
 .header__icon {
     position: absolute;
@@ -302,8 +327,6 @@ body {
 
 }
 
-//end restaurants
-
 // footer
 
 .footer {
@@ -332,7 +355,7 @@ body {
     body {
         min-width: 100%;
     }
-//start homepage
+//homepage
     .howto {
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: auto 1fr;
@@ -350,40 +373,35 @@ body {
             column-gap: 1rem;
         }
     }
-//end homepage
-
-//start restaurants
-.cover {
-    max-height: 40vh;
-    width: 100%;
-    object-fit: cover;
-}
-.menu {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: repeat(5, auto);
-    column-gap: 2.5rem;
-
-    &__nameWrapper {
-        grid-row: 1/2;
-        grid-column: 1/4;
+//restaurants
+    .cover {
+        max-height: 40vh;
+        width: 100%;
+        object-fit: cover;
     }
-    &__title {
-            grid-row: 2/3;
+    .menu {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: repeat(5, auto);
+        column-gap: 2.5rem;
+
+        &__nameWrapper {
+            grid-row: 1/2;
+            grid-column: 1/4;
         }
-    &__starter, &__main, &__dessert {
-        grid-row: 3/4;
+        &__title {
+                grid-row: 2/3;
+            }
+        &__starter, &__main, &__dessert {
+            grid-row: 3/4;
+        }
+        &__buttonWrapper {
+            grid-row: 4/5;
+            grid-column: 1/4;
+        }
+        &__button {
+            font-size: 1.7rem;
+            padding: 1rem 2rem;
+        }
     }
-    &__buttonWrapper {
-        grid-row: 4/5;
-        grid-column: 1/4;
-    }
-    &__button {
-        font-size: 1.7rem;
-        padding: 1rem 2rem;
-    }
-    
-
-}
-
 }

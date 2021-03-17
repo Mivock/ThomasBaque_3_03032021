@@ -1,3 +1,10 @@
+@keyframes test-loader {
+  100% {
+    opacity: 0;
+    z-index: -4;
+  }
+} 
+
 @keyframes menuAnim {
     0% {
       transform: scale(0)

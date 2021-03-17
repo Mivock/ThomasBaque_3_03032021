@@ -51,6 +51,20 @@
   cursor: pointer;
 }
 
+@-webkit-keyframes test-loader {
+  100% {
+    opacity: 0;
+    z-index: -4;
+  }
+}
+
+@keyframes test-loader {
+  100% {
+    opacity: 0;
+    z-index: -4;
+  }
+}
+
 @-webkit-keyframes menuAnim {
   0% {
     -webkit-transform: scale(0);
@@ -84,6 +98,32 @@ body {
 body a {
   text-decoration: none;
   color: initial;
+}
+
+.loader {
+  height: 100%;
+  width: 100%;
+  background-color: #fff;
+  opacity: .8;
+  z-index: 3;
+  position: fixed;
+  -webkit-animation: test-loader 1s 2s both;
+          animation: test-loader 1s 2s both;
+}
+
+.loader__wrapper {
+  position: absolute;
+  top: 50%;
+  text-align: center;
+  width: 100%;
+}
+
+.loader__wrapper h1 {
+  color: #9356DC;
+  font-weight: bolder;
+  font-size: 32px;
+  font-family: "Shrikhand", cursive;
+  text-transform: uppercase;
 }
 
 .header {
