@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
-.header, .location, .howto__number, .restaurant__animation, .menu__itemPrice {
+.header, .location, .explore, .howto__number, .restaurant__animation, .menu__itemPrice, .menu__buttonWrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -54,8 +54,8 @@
 .explore__button:hover, .howto__steps:hover, .restaurant__card:hover, .menu__wrapper:hover, .menu__button:hover {
   -webkit-transform: scale(1.03);
           transform: scale(1.03);
-  -webkit-box-shadow: 0px 0px 15px 5px lightgrey;
-          box-shadow: 0px 0px 15px 5px lightgrey;
+  -webkit-box-shadow: 0px 0px 15px 5px grey;
+          box-shadow: 0px 0px 15px 5px grey;
 }
 
 @-webkit-keyframes test-loader {
@@ -106,6 +106,28 @@
 }
 
 @keyframes menuAnim {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@-webkit-keyframes menuItems {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes menuItems {
   0% {
     -webkit-transform: scale(0);
             transform: scale(0);
@@ -186,7 +208,10 @@ body a {
 .explore {
   padding: 2rem 2rem 4rem 2rem;
   background-color: rgba(238, 235, 235, 0.523);
-  text-align: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .explore__title {
@@ -402,21 +427,6 @@ body a {
   padding-bottom: 2rem;
 }
 
-.menu__starter {
-  -webkit-animation: menuAnim 1s cubic-bezier(0.2, 1.3, 0.64, 1) both;
-          animation: menuAnim 1s cubic-bezier(0.2, 1.3, 0.64, 1) both;
-}
-
-.menu__main {
-  -webkit-animation: menuAnim 1s cubic-bezier(0.2, 1.3, 0.64, 1) 0.6s both;
-          animation: menuAnim 1s cubic-bezier(0.2, 1.3, 0.64, 1) 0.6s both;
-}
-
-.menu__dessert {
-  -webkit-animation: menuAnim 1s cubic-bezier(0.2, 1.3, 0.64, 1) 1.2s both;
-          animation: menuAnim 1s cubic-bezier(0.2, 1.3, 0.64, 1) 1.2s both;
-}
-
 .menu__title {
   font-size: 1.2rem;
   text-transform: uppercase;
@@ -481,7 +491,56 @@ body a {
 
 .menu__buttonWrapper {
   padding: 2rem 2rem 4rem 2rem;
-  text-align: center;
+}
+
+.delay1 {
+  -webkit-animation: menuItems 1s cubic-bezier(0.2, 1.3, 0.64, 1) 0.2s both;
+          animation: menuItems 1s cubic-bezier(0.2, 1.3, 0.64, 1) 0.2s both;
+}
+
+.delay2 {
+  -webkit-animation: menuItems 1s cubic-bezier(0.2, 1.3, 0.64, 1) 0.4s both;
+          animation: menuItems 1s cubic-bezier(0.2, 1.3, 0.64, 1) 0.4s both;
+}
+
+.delay3 {
+  -webkit-animation: menuItems 1s cubic-bezier(0.2, 1.3, 0.64, 1) 0.6s both;
+          animation: menuItems 1s cubic-bezier(0.2, 1.3, 0.64, 1) 0.6s both;
+}
+
+.delay4 {
+  -webkit-animation: menuItems 1s cubic-bezier(0.2, 1.3, 0.64, 1) 0.8s both;
+          animation: menuItems 1s cubic-bezier(0.2, 1.3, 0.64, 1) 0.8s both;
+}
+
+.delay5 {
+  -webkit-animation: menuItems 1s cubic-bezier(0.2, 1.3, 0.64, 1) 1s both;
+          animation: menuItems 1s cubic-bezier(0.2, 1.3, 0.64, 1) 1s both;
+}
+
+.delay6 {
+  -webkit-animation: menuItems 1s cubic-bezier(0.2, 1.3, 0.64, 1) 1.2s both;
+          animation: menuItems 1s cubic-bezier(0.2, 1.3, 0.64, 1) 1.2s both;
+}
+
+.delay7 {
+  -webkit-animation: menuItems 1s cubic-bezier(0.2, 1.3, 0.64, 1) 1.4s both;
+          animation: menuItems 1s cubic-bezier(0.2, 1.3, 0.64, 1) 1.4s both;
+}
+
+.delay8 {
+  -webkit-animation: menuItems 1s cubic-bezier(0.2, 1.3, 0.64, 1) 1.6s both;
+          animation: menuItems 1s cubic-bezier(0.2, 1.3, 0.64, 1) 1.6s both;
+}
+
+.delay9 {
+  -webkit-animation: menuItems 1s cubic-bezier(0.2, 1.3, 0.64, 1) 1.8s both;
+          animation: menuItems 1s cubic-bezier(0.2, 1.3, 0.64, 1) 1.8s both;
+}
+
+.delay10 {
+  -webkit-animation: menuItems 1s cubic-bezier(0.2, 1.3, 0.64, 1) 2s both;
+          animation: menuItems 1s cubic-bezier(0.2, 1.3, 0.64, 1) 2s both;
 }
 
 .footer {

@@ -86,7 +86,9 @@ body {
 .explore {
     padding: 2rem 2rem 4rem 2rem;
     background-color: rgba(238, 235, 235, 0.523);
-    text-align: center;
+    //text-align: center;
+    @extend %flex-center;
+    flex-direction: column;
 
     &__title {
         font-size: 24px;
@@ -100,6 +102,9 @@ body {
 
     &__button {
         @extend %button, %scale-shadow;
+
+
+        
     }
 }
 
@@ -287,15 +292,15 @@ body {
         row-gap: 1rem;
         padding-bottom: 2rem;
     }
-    &__starter {
-        animation: menuAnim 1s cubic-bezier(.2,1.3,.64,1) both;
-    }
-    &__main {
-        animation: menuAnim 1s cubic-bezier(.2,1.3,.64,1) .6s both;
-    }
-    &__dessert {
-        animation: menuAnim 1s cubic-bezier(.2,1.3,.64,1) 1.2s both;
-    }
+    //&__starter {
+    //    animation: menuAnim 1s cubic-bezier(.2,1.3,.64,1) both;
+    //}
+    //&__main {
+    //    animation: menuAnim 1s cubic-bezier(.2,1.3,.64,1) .6s both;
+    //}
+    //&__dessert {
+    //    animation: menuAnim 1s cubic-bezier(.2,1.3,.64,1) 1.2s both;
+    //}
 
     &__title {
         font-size: 1.2rem;
@@ -354,7 +359,7 @@ body {
     }
     &__buttonWrapper {
         padding: 2rem 2rem 4rem 2rem;
-        text-align: center;
+        @extend %flex-center;
     }
     &__button {
         @extend %button, %scale-shadow;
@@ -362,6 +367,49 @@ body {
     
 
 }
+
+// Delay menu items
+
+.delay1 {
+    animation: menuItems 1s cubic-bezier(.2,1.3,.64,1) .2s both;
+}
+
+.delay2 {
+    animation: menuItems 1s cubic-bezier(.2,1.3,.64,1) .4s both;
+}
+
+.delay3 {
+    animation: menuItems 1s cubic-bezier(.2,1.3,.64,1) .6s both;
+}
+
+.delay4 {
+    animation: menuItems 1s cubic-bezier(.2,1.3,.64,1) .8s both;
+}
+
+.delay5 {
+    animation: menuItems 1s cubic-bezier(.2,1.3,.64,1) 1s both;
+}
+
+.delay6 {
+    animation: menuItems 1s cubic-bezier(.2,1.3,.64,1) 1.2s both;
+}
+
+.delay7 {
+    animation: menuItems 1s cubic-bezier(.2,1.3,.64,1) 1.4s both;
+}
+
+.delay8 {
+    animation: menuItems 1s cubic-bezier(.2,1.3,.64,1) 1.6s both;
+}
+
+.delay9 {
+    animation: menuItems 1s cubic-bezier(.2,1.3,.64,1) 1.8s both;
+}
+
+.delay10 {
+    animation: menuItems 1s cubic-bezier(.2,1.3,.64,1) 2s both;
+}
+
 
 // footer
 
