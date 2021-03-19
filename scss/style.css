@@ -34,8 +34,8 @@
 .menu__wrapper {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 80% 20%;
-      grid-template-columns: 80% 20%;
+  -ms-grid-columns: 80% 20% 0%;
+      grid-template-columns: 80% 20% 0%;
   -ms-grid-rows: 2rem 2rem;
       grid-template-rows: 2rem 2rem;
 }
@@ -160,6 +160,7 @@ body a {
   z-index: 3;
   -webkit-animation: test-loader 1s 2s both;
           animation: test-loader 1s 2s both;
+  display: none;
 }
 
 .loader__wrapper {
@@ -486,7 +487,7 @@ body a {
 }
 
 .menu__animation {
-  display: none;
+  background-color: #99E2D0;
 }
 
 .menu__buttonWrapper {
@@ -583,6 +584,7 @@ body a {
     grid-row: 2/3;
   }
   .restaurant__grid {
+    padding: 0 1rem;
     margin: auto;
     -ms-grid-columns: 1fr 1fr;
         grid-template-columns: 1fr 1fr;
@@ -634,6 +636,8 @@ body a {
     -ms-grid-row: 3;
     -ms-grid-row-span: 1;
     grid-row: 3/4;
+    -ms-grid-columns: auto auto 0px;
+        grid-template-columns: auto auto 0px;
   }
   .menu__buttonWrapper {
     -ms-grid-row: 4;
@@ -646,6 +650,11 @@ body a {
   .menu__button {
     font-size: 1.7rem;
     padding: 1rem 2rem;
+  }
+  .menu__animation {
+    -ms-grid-column: 3;
+    -ms-grid-column-span: 1;
+    grid-column: 3/4;
   }
   .small-card {
     height: 1px;

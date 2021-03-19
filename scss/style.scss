@@ -35,7 +35,7 @@ body {
     opacity: .9;
     z-index: 3;
     animation: test-loader 1s 2s both;
-    //display: none; 
+    display: none; 
 
     &__wrapper {
         position: absolute;
@@ -355,7 +355,8 @@ body {
     }
 
     &__animation {
-        display: none;
+        //display: none;
+        background-color: $color-third;
     }
     &__buttonWrapper {
         padding: 2rem 2rem 4rem 2rem;
@@ -457,6 +458,7 @@ body {
 
     .restaurant {
         &__grid {
+            padding: 0 1rem;
             margin: auto;
             grid-template-columns: 1fr 1fr;
             grid-template-rows: 1fr 1fr;
@@ -495,6 +497,7 @@ body {
             }
         &__starter, &__main, &__dessert {
             grid-row: 3/4;
+            grid-template-columns: auto auto 0px;
         }
         &__buttonWrapper {
             grid-row: 4/5;
@@ -503,6 +506,10 @@ body {
         &__button {
             font-size: 1.7rem;
             padding: 1rem 2rem;
+        }
+
+        &__animation {
+            grid-column: 3/4;
         }
     }
 
