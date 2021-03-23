@@ -35,3 +35,13 @@
     transform: scale(1);
   }
 }
+
+// Favorites
+@keyframes iconRotate {
+  from {
+    transform:rotate(180deg);
+  }
+  to {
+      transform:rotate(360deg);
+  }
+}

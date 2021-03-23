@@ -102,8 +102,6 @@ body {
 
     &__button {
         @extend %button, %scale-shadow;
-
-
         
     }
 }
@@ -266,17 +264,15 @@ body {
 
 .menu {
     margin-top: -50px;
-    padding: 0 1rem;
+    width: 100%;
 
 
     &__nameWrapper {
         @extend %flex-space;
         position: relative;
-        padding: 1rem 2rem 0 1rem;
+        padding: 1rem;
         border-radius: 2rem 2rem 0 0;
         background-color: #fff;
-        //z-index: 2;
-        margin: 0 -1rem;
 
         h1 {
             font-family: $font-title;
@@ -288,7 +284,7 @@ body {
     }
 
     &__starter, &__main, &__dessert {
-        @extend %menu-grid;
+        //@extend %menu-grid;
         row-gap: 1rem;
         padding-bottom: 2rem;
     }
@@ -305,7 +301,7 @@ body {
     &__title {
         font-size: 1.2rem;
         text-transform: uppercase;
-        padding-bottom: .5rem;
+        padding: 0 1rem .5rem 1rem;
         position: relative;
         font-weight: 300;
         &::after {
@@ -316,34 +312,67 @@ body {
             position: absolute;
             left: 0;
             bottom: 0;
+            margin-left: 1rem
         }
     }
 
     &__wrapper {
-        @extend %item-grid, %scale-shadow;
+        @extend %scale-shadow;
         border-radius: 15px;
-        padding: .3rem;
+        margin: 1rem;
         box-shadow: 3px 3px 10px 3px #ccc;
         cursor: pointer;
+        display: flex;
+        max-width: 100%;
+        height: 4.5rem;
+        padding: .5rem;
+        overflow: hidden; //sinon wrapper s'aggrandit
+
+
+    }
+    &__wrapper:hover &__animation {
+        visibility: visible;
+        margin-right: -1rem;
+
+        & .animationIcon {
+            animation: iconRotate .6s both;
+        }
+        
     }
 
-    &__itemName, &__itemInfo {
-        vertical-align: middle;
+    &__infoWrapper {
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
-        margin: auto;
-        width: 95%;
-        padding: 0 .5rem;
+        flex: 1;
+        @extend %flex-center;
+        flex-wrap: wrap;
+        padding: .5rem 0;
+    }
+
+    &__wrapper:hover &__itemPrice {
+        margin-left: 0;
+    }
+    
+
+    &__itemName, &__itemInfo {
+        //vertical-align: middle;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        margin: 0;
         font-size: 1rem;
+        width: 90%;
         
     }
 
     &__itemPrice {
-        grid-column: 2/3;
-        grid-row: -2/-1;
-        @extend %flex-center;
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;
         font-weight: bold;
+        width: 3rem;
+        padding-right: 1rem;
 
     }
     &__itemName {
@@ -355,8 +384,20 @@ body {
     }
 
     &__animation {
-        display: none;
+        background-color: $color-third;
+        margin: 0;
+        border-radius: 0 15px 15px 0;
+        @extend %flex-center;
+        width: 5rem;
+        margin: -1rem -6rem -1rem 1rem;
+        transition-duration: .5s; //animation ici et pas sur le hover
+
+        & .animationIcon {
+            color: #fff;
+            font-size: 1.5rem;
+        }
     }
+
     &__buttonWrapper {
         padding: 2rem 2rem 4rem 2rem;
         @extend %flex-center;
