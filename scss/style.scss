@@ -523,9 +523,11 @@ body {
     }
     .menu {
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-columns: repeat(3,1fr);
         grid-template-rows: auto;
         column-gap: 2.5rem;
+        width: 100%;
+        
 
         &__nameWrapper {
             grid-row: 1/2;
@@ -536,6 +538,7 @@ body {
             }
         &__starter, &__main, &__dessert {
             grid-row: 3/4;
+            overflow: hidden; //sinon width pas bonne avec le slider
         }
         &__buttonWrapper {
             grid-row: 4/5;
